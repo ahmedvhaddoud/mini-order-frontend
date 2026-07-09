@@ -1,7 +1,7 @@
 import axios from "axios"
 import keycloak from "../auth/keycloak"
 
-const API_URL = "http://localhost:8081/api/orders"
+const API_URL = import.meta.env.VITE_API_URL+"/api/orders"
 
 const getAuthHeader = async () => {
     await keycloak.updateToken(30)
